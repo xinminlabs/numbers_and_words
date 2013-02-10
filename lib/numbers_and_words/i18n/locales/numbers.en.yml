@@ -55,4 +55,4 @@ en:
       one: decillionth
       other: decillionths
     union: and
-    exponential: %{coefficient} times ten to the %{exponent}
+    exponential: "%{coefficient} times ten to the %{exponent}"

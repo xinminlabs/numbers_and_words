@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'spec_helper'
 
 describe NumbersAndWords::TranslationsHelpers::Hu do
@@ -60,5 +61,3 @@ describe NumbersAndWords::TranslationsHelpers::Hu do
     end
   end
 end
-
-
