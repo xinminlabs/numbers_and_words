@@ -12,11 +12,11 @@ module NumbersAndWords
       end
 
       def integer_part
-        if ordinal?
-          words.empty? && zeroth || as_ordinal
-        else
-          words.empty? && zero || inner_reversed
-        end
+        words.empty? && zero || inner_reversed
+      end
+
+      def ordinal_integer_part
+        words.empty? && zeroth || inner_reversed(as_ordinal)
       end
 
       def fractional_part
@@ -65,7 +65,7 @@ module NumbersAndWords
       end
 
       def as_ordinal
-        inner_reversed words[1..-1].unshift(words[0][1..-1].unshift ordinal)
+        words[1..-1].unshift(words[0][1..-1].unshift ordinal)
       end
 
       def ordinal

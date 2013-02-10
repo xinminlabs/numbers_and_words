@@ -48,6 +48,10 @@ module NumbersAndWords
         def translation_ordinal_mega capacity
           t("ordinals.mega")[capacity]
         end
+
+        def translation_exponential coefficient, exponent
+          t(:exponential, :coefficient => coefficient, :exponent => exponent)
+        end
       end
     end
   end

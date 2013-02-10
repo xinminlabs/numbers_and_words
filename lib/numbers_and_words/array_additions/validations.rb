@@ -1,19 +1,16 @@
 module NumbersAndWords
   module ArrayAdditions
     module Validations
-      VALID_CHARACTERS = ("0".."9").to_a.push(".").freeze
+      VALID_FORMAT = /\A\-?\d+(\.\d+)?(e[+\-]\d+)?\z/.freeze
 
       def validate_figure_array! options = {}
-        if invalid_characters.any?
-          invalid = invalid_characters.uniq.join ', '
-          raise "Figures may contain only numbers and `.` (invalid characters: #{invalid})."
-        end
-        raise "Figures may contain only 1 `.` (#{count '.'} found)." if count(".") > 1
-        raise "Ordinal figures may not contain a `.`." if options[:ordinal] && count(".") > 0
+        raise "Figures format is invalid." unless valid_format?
+        raise "Figures may not have a fractional part when :ordinal is true." if options[:ordinal] && fractional?
+        raise "Figures may not have an exponential part when :ordinal is true." if options[:ordinal] && exponential?
       end
 
-      def invalid_characters
-        reject { |character| VALID_CHARACTERS.include? character }
+      def valid_format?
+        join.match VALID_FORMAT
       end
     end
   end

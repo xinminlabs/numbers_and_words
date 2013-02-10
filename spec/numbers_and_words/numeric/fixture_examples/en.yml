@@ -131,3 +131,9 @@ to_words:
     420000: four hundred twenty thousandth
     4200000: four million two hundred thousandth
     42000000: forty-two millionth
+  exponentials:
+    options:
+      :exponential: true
+    1.0e+1: one times ten to the first
+    1.1e+2: one and one tenth times ten to the second
+    1.234e+42: one and two hundred thirty-four thousandths times ten to the forty-second

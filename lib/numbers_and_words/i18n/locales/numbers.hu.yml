@@ -13,3 +13,26 @@ hu:
       hundreds: századik
       mega: [nulladik, ezredik, milliomodik, milliárdodik, billiomodik, billiárdodik, trilliomodik, trilliárdodik, kvadrilliomodik, kvadrilliárdodik, kvintilliomodik, kvintilliárdodik]
     micro: [_, tized, század, ezred, milliomod, milliárdod, billiomod, billiárdod, trilliomod, trilliárdod, kvadrilliomod, kvadrilliárdod, kvintilliomod, kvintilliárdod]
+    exponential: %{coefficient} tíz %{article} %{exponent}
+    vowels: [a, á, e, é, i, í, o, ó, ö, ő, u, ú, ü, ű]
+    exponent_article:
+      starts_with_vowel: az
+      starts_with_consonant: a
+    coefficient_suffix:
+      a: szor
+      á: szor
+      e: szer
+      é: szer
+      i: szor
+      í: szer
+      o: szor
+      ó: szor
+      ö: ször
+      ő: ször
+      ú: szor
+    exponent_suffix:
+      default: n
+      adik: "on"
+      odik: "on"
+      edik: en
+      ödik: en

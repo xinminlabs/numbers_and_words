@@ -48,6 +48,10 @@ module NumbersAndWords
         index "."
       end
 
+      def fractional?
+        !fraction_index.nil?
+      end
+
       def fraction_capacity
         [fraction_capacity_count, fraction_sub_capacity]
       end
@@ -70,6 +74,34 @@ module NumbersAndWords
 
       def ordinal_capacity
         (ordinal_index.to_f / 3).floor
+      end
+
+      def exponent_index
+        index "e"
+      end
+
+      def exponential?
+        !exponent_index.nil?
+      end
+
+      def integer_range
+        0..integer_end
+      end
+
+      def fraction_range
+        (fraction_index + 1)..fraction_end
+      end
+
+      def exponent_range
+        (exponent_index + 2)..-1
+      end
+
+      def integer_end
+        fractional? && fraction_index - 1 || fraction_end
+      end
+
+      def fraction_end
+        exponential? && exponent_index - 1 || -1
       end
     end
   end

@@ -122,3 +122,9 @@ to_words:
     420000: négyszázhúszezredik
     4200000: négymillió-kettőszázezredik
     42000000: negyvenkettőmilliomodik
+  exponentials:
+    options:
+      :exponential: true
+    1.0e+1: egyszer tíz az elsőn
+    1.1e+2: egy egész egy tizedszer tíz a másodikon
+    1.234e+42: egy egész kettőszázharmincnégy ezredszer tíz a negyvenkettediken

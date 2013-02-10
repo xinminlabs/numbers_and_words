@@ -18,10 +18,15 @@ module NumbersAndWords
         end
 
         def fraction_strings
-          return [] unless @fraction_figures.any?
-          save_parent_figures do |parent_figures|
-            @figures = @fraction_figures
-            strings
+          return [] unless fraction_figures.any?
+          with_figures(fraction_figures) { strings }
+        end
+
+        def exponent_strings
+          return [] unless exponent_figures.any?
+          with_figures(exponent_figures) do
+            @words = strings
+            as_ordinal
           end
         end
 
@@ -37,10 +42,7 @@ module NumbersAndWords
         end
 
         def words_in_capacity capacity = 0
-          save_parent_figures do |parent_figures|
-            @figures = parent_figures.figures_array_in_capacity(capacity)
-            strings
-          end
+          with_figures(figures.figures_array_in_capacity capacity) { strings }
         end
 
         alias_method :number_without_capacity_to_words, :words_in_capacity
@@ -67,27 +69,12 @@ module NumbersAndWords
           end
         end
 
-        def save_parent_figures
-          parent_figures = @figures
-          result = yield(parent_figures)
-          @figures = parent_figures
-          result
-        end
-
-        def ordinal
-          if figures.teens
-            translation_ordinal_teens(figures.ones)
-          elsif figures.tens && figures.ones
-            translation_ordinal_tens_with_ones(figures.tens_with_ones)
-          elsif figures.ones
-            translation_ordinal_ones(figures.ones)
-          elsif figures.tens
-            translation_ordinal_tens(figures.tens)
-          elsif figures.hundreds
-            translation_ordinal_hundreds(figures.hundreds)
-          else
-            translation_ordinal_megs(figures.ordinal_capacity)
-          end
+        def with_figures figures
+          saved_figures, saved_words = @figures, @words
+          @figures = figures
+          yield
+        ensure
+          @figures, @words = saved_figures, saved_words
         end
       end
     end
