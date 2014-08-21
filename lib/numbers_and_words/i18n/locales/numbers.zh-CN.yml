@@ -1,0 +1,67 @@
+zh-CN:
+  numbers:
+    ones: [零, 一, 二, 三, 四, 五, 六, 七, 八, 九]
+    teens: [十, 十一, 十二, 十三, 十四, 十五, 十六, 十七, 十八, 十九]
+    tens: [零, 十, 二十, 三十, 四十, 五十, 六十, 七十, 八十, 九十]
+    hundreds: 百
+    mega: [ones, 千, 百万, 十亿, 万亿, quadrillion, quintillion, sextillion, septillion, octillion, nonillion, decillion, undecillion, duodecillion, tredecillion, quattuordecillion]
+    ordinal:
+      ones: [zeroth, 第一, 第二, 第三, 第四, 第五, 第六, 第七, 第八, 第九]
+      teens: [第十, 第十一, 第十二, 第十三, 第十四, 第十五, 第十六, 第十七, 第十八, 第十九]
+      tens: [zeroth, 第十, 第二十, 第三十, 第四十, 第五十, 第六十, 第七十, 第八十, 第九十]
+      hundreds: hundredth
+      mega: [zeroth, thousandth, millionth, billionth, trillionth, quadrillionth, quintillionth, sextillionth, septillionth, octillionth, nonillionth, decillionth, undecillionth, duodecillionth, tredecillionth, quattuordecillionth]
+    union_separator: and
+    micro: [_, tenths, hundredths, thousandths, millionths, billionths, trillionths, quadrillionths, quintillionths, sextillionths, septillionths, octillionths, nonillionths, decillionths, undecillionths, duodecillionths, tredecillionths, quattuordecillionths]
+    tenths:
+      one: tenth
+      other: tenths
+    hundredths:
+      one: hundredth
+      other: hundredths
+    thousandths:
+      one: thousandth
+      other: thousandths
+    millionths:
+      one: millionth
+      other: millionths
+    billionths:
+      one: billionth
+      other: billionths
+    trillionths:
+      one: trillionth
+      other: trillionths
+    quadrillionths:
+      one: quadrillionth
+      other: quadrillionths
+    quintillionths:
+      one: quintillionth
+      other: quintillionths
+    sextillionths:
+      one: sextillionth
+      other: sextillionths
+    septillionths:
+      one: septillionth
+      other: septillionths
+    octillionths:
+      one: octillionth
+      other: octillionths
+    nonillionths:
+      one: nonillionth
+      other: nonillionths
+    decillionths:
+      one: decillionth
+      other: decillionths
+    undecillionths:
+      one: undecillionth
+      other: undecillionths
+    duodecillion:
+      one: duodecillionth
+      other: duodecillionths
+    tredecillion:
+      one: tredecillionth
+      other: tredecillionths
+    quattuordecillion:
+      one: quattuordecillionth
+      other: quattuordecillionths
+    union: and

@@ -27,6 +27,9 @@ require 'numbers_and_words/strategies/figures_converter/languages/pt'
 
 require 'numbers_and_words/strategies/figures_converter/languages/ka'
 
+require 'numbers_and_words/strategies/figures_converter/languages/families/hanzi'
+require 'numbers_and_words/strategies/figures_converter/languages/zh_cn'
+
 module NumbersAndWords
   module Strategies
     module FiguresConverter

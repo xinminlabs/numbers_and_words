@@ -2,7 +2,7 @@ module NumbersAndWords
   module Strategies
     module FiguresConverter
       module Decorators
-        module En
+        module ZhCn
           class Integral < Base
           end
         end

@@ -2,6 +2,7 @@ require 'numbers_and_words/translations/base'
 require 'numbers_and_words/translations/families/base'
 require 'numbers_and_words/translations/families/cyrillic'
 require 'numbers_and_words/translations/families/latin'
+require 'numbers_and_words/translations/families/hanzi'
 require 'numbers_and_words/translations/extensions/fraction_significance'
 require 'numbers_and_words/translations/ru'
 require 'numbers_and_words/translations/en'
@@ -20,6 +21,7 @@ require 'numbers_and_words/translations/lt'
 require 'numbers_and_words/translations/de'
 require 'numbers_and_words/translations/pt'
 require 'numbers_and_words/translations/ka'
+require 'numbers_and_words/translations/zh_cn'
 
 module NumbersAndWords
   module Translations
